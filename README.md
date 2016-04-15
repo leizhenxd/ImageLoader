@@ -49,7 +49,6 @@ var imgLoader = new ImageLoader({
 
 You can also create normalized executors to pass to the loader:
 ```javascript
-// Handler in pseudo code
 var onCheckImage = function ( el ) {
     var bounds = el.getBoundingClientRect();
 
