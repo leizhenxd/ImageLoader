@@ -50,14 +50,10 @@ var imgLoader = new ImageLoader({
 You can also create normalized executors to pass to the loader:
 ```javascript
 // Handler in pseudo code
-var onCheckImage = function ( element ) {
-    var ret = false;
+var onCheckImage = function ( el ) {
+    var bounds = el.getBoundingClientRect();
 
-    if ( elementOffsetTop < (currentWindowScrollY + currentWindowHeight) ) {
-        ret = true;
-    }
-
-    return ret;
+    return ( bounds.top < window.innerHeight && bounds.bottom > 0 );
 };
 
 
